@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TORCITY HOME</title>
+    <title>STAFF DATABASE</title>
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ url_for('static', filename='css/home.css') }}"
+      href="{{ url_for('static', filename='css/staff.css') }}"
     />
     <link
       rel="stylesheet"
@@ -23,15 +23,34 @@
       </div>
       <nav class="navbar-nav">
         <ul>
-          <li><a href="http://127.0.0.1:5000/">About</a></li>
-          <li><a href="http://127.0.0.1:5000/reservation">Reservation</a></li>
-          <li><a href="http://127.0.0.1:5000/pricing">Pricing</a></li>
+          <li><a href="">Booking</a></li>
+          <li><a href="">Customer</a></li>
+          <li><a href="">Payment</a></li>
         </ul>
       </nav>
       <div class="navbar-actions">
-        <a href="http://127.0.0.1:5000/signup" class="btn">Sign Up</a>
-        <a href="http://127.0.0.1:5000/staff" class="btn">Staff</a>
+        <a href="http://127.0.0.1:5000/" class="btn">Return</a>
       </div>
     </header>
+    <h1>List of Bookings</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Number of people</th>
+        <th>Number of rooms</th>
+        <th>Room type</th>
+        <th>Check-in date</th>
+        <th>Check-out date</th>
+      </tr>
+      {% for row in data %}
+      <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
   </body>
 </html>

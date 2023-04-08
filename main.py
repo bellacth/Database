@@ -12,6 +12,24 @@ c = conn.cursor()
 def home():
     return render_template('home.html')
 
+@app.route('/signup', methods=['GET', 'POST'])
+def signup():
+    if request.method == 'POST':
+        full_name = request.form['full_name'],
+        phone_number = request.form['phone_number'],
+        email = request.form['email'],
+        username = request.form['username'],
+        password = request.form['password'],
+
+        conn = sqlite3.connect('data.db')
+        c = conn.cursor()
+        c.execute("INSERT INTO customer(full_name, phone_number, email, username, password) VALUES(?,?,?,?,?)", (str(full_name), str(phone_number), str(email), str(username), str(password)))
+        conn.commit()
+        conn.close()
+
+        return 'registered account'
+    return render_template('signup.html')
+
 @app.route('/reservation', methods=['GET', 'POST'])
 def reservation():
     if request.method == 'POST':
@@ -30,3 +48,26 @@ def reservation():
 
         return 'successfully booked'
     return render_template('reservation.html')
+
+@app.route('/staff')
+def staff():
+    conn = sqlite3.connect('data.db')
+    c = conn.cursor()
+    c.execute("SELECT * FROM booking")
+    data = c.fetchall()
+    conn.close()
+    return render_template('staff.html', data=data)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+'''
+@app.route('/staff', methods=['GET'])
+def staff():
+    c = conn.cursor()
+    c.execute("SELECT * FROM booking")
+    data = c.fetchall()
+    conn.commit()
+    conn.close()
+    return render_template('staff.html', data=data)
+    '''
