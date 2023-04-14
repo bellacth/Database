@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pricing - Space Hotel</title>
+    <meta property="og:title" content="Pricing - Space Hotel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/pricing.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-logo">
+        <img src="../static/images/logo.png" alt="Logo" />
+      </div>
+      <nav class="navbar-nav">
+        <ul>
+          <li><a href="http://127.0.0.1:5000/">About</a></li>
+          <li><a href="http://127.0.0.1:5000/reservation">Reservation</a></li>
+          <li><a href="http://127.0.0.1:5000/pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-actions">
+        <a href="http://127.0.0.1:5000/signup" class="btn">Sign Up</a>
+        <a href="http://127.0.0.1:5000/staff_login" class="btn">Staff</a>
+      </div>
+    </header>
+
+    <h1>Rooms and Pricings</h1>
+
+    <div class="container">
+      <div>
+        <img
+          src="../static/images/single_room.jpg"
+          alt="image of single room"
+          class="roomImg"
+        />
+        <h2>Single Room</h2>
+        <p class="description">
+          Our single room in the space hotel features a comfortable bed and a
+          stunning view of the galaxy. Best suited for ambitious solo explorers.
+        </p>
+        <p class="priceTag">Starting at 499.99 per night</p>
+      </div>
+
+      <div>
+        <img
+          src="../static/images/double_room.jpg"
+          alt="image of double room"
+          class="roomImg"
+        />
+        <h2>Double Room</h2>
+        <p class="description">
+          Perfect for couples or friends traveling together. The room features a
+          comfortable queen-size bed, modern amenities, and a stunning view of
+          the surrounding area.
+        </p>
+        <p class="priceTag">Starting at 699.99 per night</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div>
+        <img
+          src="../static/images/family_room.jpg"
+          alt="image of family room"
+          class="roomImg"
+        />
+        <h2>Family Room</h2>
+        <p class="description">
+          Designed to accommodate your entire family. With multiple beds, modern
+          amenities, and ample space for everyone, you can relax in comfort and
+          enjoy quality time together.
+        </p>
+        <p class="priceTag">Starting at 999.99 per night</p>
+      </div>
+
+      <div>
+        <img
+          src="../static/images/deluxe_room.jpg"
+          alt="image of deluxe room"
+          class="roomImg"
+        />
+        <h2>Deluxe Room</h2>
+        <p class="description">
+          The best of the best. Live like the rulers of the galaxies.
+        </p>
+        <p class="priceTag">Starting at 1299.99 per night</p>
+      </div>
+    </div>
+  </body>
+</html>

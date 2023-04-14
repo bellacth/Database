@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SUCCESFUL LOGIN</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/reservation.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-logo">
+        <img src="../static/images/logo.png" alt="Logo" />
+      </div>
+      <nav class="navbar-nav">
+        <ul>
+          <li><a href="http://127.0.0.1:5000/">About</a></li>
+          <li><a href="http://127.0.0.1:5000/reservation">Reservation</a></li>
+          <li><a href="http://127.0.0.1:5000/pricing">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="navbar-actions">
+        <a href="http://127.0.0.1:5000/signup" class="btn">Sign Up</a>
+        <a href="http://127.0.0.1:5000/staff_login" class="btn">Staff</a>
+      </div>
+    </header>
+    <p>
+      You have successfully logged in click on any sections above to find out
+      more about our hotel and services.
+    </p>
+  </body>
+</html>

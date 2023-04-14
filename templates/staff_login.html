@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STAFF DATABASE</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/staff.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="navbar-logo">
+        <img src="../static/images/logo.png" alt="Logo" />
+      </div>
+      <div class="navbar-actions">
+        <a href="http://127.0.0.1:5000/" class="btn">Return</a>
+      </div>
+    </header>
+    <form class="staff-login" action="/staff_login" method="post">
+      <label for="access_code">Access Code:</label>
+      <input type="text" name="code" id="access_code" />
+      <button type="submit">Enter</button>
+      {% if error %}
+      <p class="error-message">
+        Wrong passcode. If you are not a staff, click on the return button on
+        the upper left-hand corner to exit this screen. If you are a staff and
+        you do not know the passcode, please contact you supervisor for the
+        code.
+      </p>
+      {% endif %}
+    </form>
+  </body>
+</html>
